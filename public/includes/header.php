@@ -4,16 +4,21 @@
     <a class="flex-sm-fill text-sm-center nav-link" href="page?albuns">Home</a>
   </li>
 
-  <li class="nav-item">
-    <a class="flex-sm-fill text-sm-center nav-link" href="#">Teste</a>
-  </li>
+  <?php
+    $albuns = getAlbuns();
 
-  <li class="nav-item">
-    <a class="flex-sm-fill text-sm-center nav-link" href="#">Teste</a>
-  </li>
+    foreach ($albuns as $album):
+      $infoAlbum = explode('/', $album);
+      $nameAlbum = $infoAlbum[1];
+  ?>
 
-  <li class="nav-item">
-    <a class="flex-sm-fill text-sm-center nav-link" href="#">Teste</a>
-  </li>
+    <li class="nav-item">
+      <a class="flex-sm-fill text-sm-center nav-link" 
+        href='?page=musics&album=<?=$nameAlbum?>'>
+        <?=$nameAlbum;?>
+      </a>
+    </li>
+
+    <?php endforeach; ?>
 
 </ul>
