@@ -14,6 +14,7 @@
         <?php
 
             include_once 'helpers.php';
+            include_once 'includes/header.php';
 
             if(isset($_GET['page']))
                 if (file_exists("pages/{$_GET['page']}.php"))
