@@ -16,7 +16,7 @@
             $imgAlbum = "{$album}/{$nameAlbum}.jpg";
     ?>
         <div class="col-3 album">
-            <a href="">
+            <a href="?page=musics&album=<?=$nameAlbum?>">
                 <img class="img-album" src="<?=$imgAlbum?>" alt="<?=$nameAlbum?>">
                 <h6><?=$nameAlbum?></h6>
             </a>
